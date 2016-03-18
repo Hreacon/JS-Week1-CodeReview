@@ -2,7 +2,7 @@
 
 #### _Use the GitHub Api to see public information about users, 3.18.2016_
 
-### By _** Nicholas Jensen-Hay**_
+### By _**Nicholas Jensen-Hay**_
 
 ## Description
 
