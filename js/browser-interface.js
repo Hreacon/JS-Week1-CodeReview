@@ -5,7 +5,6 @@ $(document).ready(function() {
     event.preventDefault();
     var username = $("input[name=name]").val();
     $("input[name=name]").val('');
-    $(".template .user h3").text(username);
-    $(".response").append($(".template").html());
+    GitHubApi.GetUser("hreacon");
   });
 });
