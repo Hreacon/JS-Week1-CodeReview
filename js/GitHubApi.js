@@ -31,6 +31,7 @@ exports.GetUserRepos = function(username) {
 
         $(".template .repositories ul").append(html);
       }
+      $(".template .showRepo").attr("data-name", response[0].owner.login);
       exports.appendUser();
     }).fail(function(error){
       console.log(error.responseJSON.message);
@@ -40,4 +41,11 @@ exports.GetUserRepos = function(username) {
 exports.appendUser = function() {
   $(".response").append($(".template").html());
   $(".template .repositories ul").html('');
+  var name = $(".template .user .showRepo").attr("data-name");
+  console.log(name);
+  $(".template .showRepo").attr("data-name", '');
+  $(".showRepo[data-name="+name+"]").click(function() {
+    console.log("test");
+    $(this).parent().find('.repositories').toggleClass('hidden');
+  });
 };
