@@ -1,5 +1,5 @@
 
-if [ ! -d "~/.atom/packages/minimap" ]; then
+if [ ! -d ~/.atom/packages/minimap ]; then
   echo "Setting up atom"
   cp -r ./atomconfigfile/config.cson ~/.atom/
   apm install TODO-show
