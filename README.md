@@ -1,16 +1,12 @@
-# _Project Title_
+# GitHub Api
 
-#### _A simple template, 3.__.2016_
+#### _Use the GitHub Api to see public information about users, 3.18.2016_
 
-### By _** Nicholas Jensen-Hay and **_
+### By _** Nicholas Jensen-Hay**_
 
 ## Description
 
-_This web app is designed to ._
-
-_The goal of this project is to ._
-
-_The project was put together using ._
+GitHub API lets you know public information about the users and their repos.
 
 ## Setup/Installation
 
@@ -35,7 +31,7 @@ _This application is not fully designed and may have unknown bugs._
 
 ## Support and contact details
 
-_If you have any questions, concerns, or feedback, please contact the authors through_ [gitHub](https://github.com/hreacon/).
+_If you have any questions, concerns, or feedback, please contact me through_ [gitHub](https://github.com/hreacon/).
 
 ## Technologies Used
 
