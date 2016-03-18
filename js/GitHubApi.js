@@ -6,12 +6,12 @@ exports.GetUserInfo = function(username) {
     .then(function(response) {
       console.log(response);
       $("[username="+response.login+"] .userInfo img").attr('src', response.avatar_url);
-      $(".userInfo .email").text("Email: " + response.email);
-      $(".userInfo .name").text("Name: " + response.name);
-      $(".userInfo .repoCount").text("Repo Count: " + response.public_repos);
-      $(".userInfo .followers").text("Followers: " + response.following);
-      $(".userInfo .location").text("Location: " + response.location);
-      $(".userInfo .createdOn").text("Account created on " + moment(response.created_at).format('D/M/Y'));
+      $("[username="+response.login+"] .userInfo .email").text("Email: " + response.email);
+      $("[username="+response.login+"] .userInfo .name").text("Name: " + response.name);
+      $("[username="+response.login+"] .userInfo .repoCount").text("Repo Count: " + response.public_repos);
+      $("[username="+response.login+"] .userInfo .followers").text("Followers: " + response.following);
+      $("[username="+response.login+"] .userInfo .location").text("Location: " + response.location);
+      $("[username="+response.login+"] .userInfo .createdOn").text("Account created on " + moment(response.created_at).format('D/M/Y'));
     });
 };
 
@@ -39,4 +39,5 @@ exports.GetUserRepos = function(username) {
 
 exports.appendUser = function() {
   $(".response").append($(".template").html());
+  $(".template .repositories ul").html('');
 };
