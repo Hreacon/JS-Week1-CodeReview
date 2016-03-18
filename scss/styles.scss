@@ -17,3 +17,35 @@ input[type=submit] {
 .template {
   display: none;
 }
+
+.userInfo img {
+  width:100px;
+  height:100px;
+}
+.user {
+  background:lightgray;
+  border-radius: 10px;
+  padding:5px;
+  width:80%;
+  margin:5px auto;
+}
+.userInfo * {
+  display: inline-block;
+  padding:5px;
+  border:1px solid;
+  border-radius: 5px;
+}
+.repositories ul {
+  list-style-type: none;
+  margin:0; padding:0;
+}
+.repositories ul li {
+  padding:5px;
+  border-radius: 10px;
+  border:2px solid blue;
+  margin:2px;
+  width:100%;
+}
+.repositories ul li div {
+  text-indent: 15px;
+}
