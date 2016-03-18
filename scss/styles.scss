@@ -17,10 +17,14 @@ input[type=submit] {
 .template {
   display: none;
 }
-
 .userInfo img {
-  width:100px;
-  height:100px;
+  width:10%;
+  float:right;
+}
+.user h3 {
+  width:50%;
+  float:left;
+  clear:none;
 }
 .user {
   background:lightgray;
@@ -29,11 +33,13 @@ input[type=submit] {
   width:80%;
   margin:5px auto;
 }
-.userInfo * {
+.userInfo div {
   display: inline-block;
   padding:5px;
   border:1px solid;
   border-radius: 5px;
+  width:49%;
+  margin:2px 0;
 }
 .repositories ul {
   list-style-type: none;
