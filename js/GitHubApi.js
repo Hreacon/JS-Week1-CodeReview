@@ -1,8 +1,12 @@
-var apiKey = require('./../.env').ghApiKey;
+var apiKey = '';
+apiKey = require('./../.env').ghApiKey; // COMMENT THIS LINE OUT IF YOU DONT HAVE AN API KEY
 var moment = require('moment');
 
 exports.GetUserInfo = function(username) {
-  $.get("https://api.github.com/users/"+username+"?access_token="+apiKey)
+  console.log("APIKEY: " + apiKey);
+  if(apiKey.length > 0)
+    apiKey = "?access_token=" + apiKey;
+  $.get("https://api.github.com/users/"+username+apiKey)
     .then(function(response) {
       console.log(response);
       $("[username="+response.login+"] .userInfo img").attr('src', response.avatar_url);
@@ -12,11 +16,13 @@ exports.GetUserInfo = function(username) {
       $("[username="+response.login+"] .userInfo .followers").text("Followers: " + response.following);
       $("[username="+response.login+"] .userInfo .location").text("Location: " + response.location);
       $("[username="+response.login+"] .userInfo .createdOn").text("Account created on " + moment(response.created_at).format('D/M/Y'));
-    });
+    });/**/
 };
 
 exports.GetUserRepos = function(username) {
-  $.get('https://api.github.com/users/'+username+'/repos?per_page=1000&access_token=' + apiKey)
+  if(apiKey.length > 0)
+    apiKey = "&access_token=" + apiKey;
+  $.get('https://api.github.com/users/'+username+'/repos?per_page=1000' + apiKey)
     .then(function(response){
       console.log(response);
       $(".template .user h3").html(response[0].owner.login);
