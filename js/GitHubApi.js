@@ -6,12 +6,12 @@ exports.GetUserInfo = function(username) {
     .then(function(response) {
       console.log(response);
       $("[username="+response.login+"] .userInfo img").attr('src', response.avatar_url);
-      $(".userInfo .email").text(response.email);
-      $(".userInfo .name").text(response.name);
-      $(".userInfo .repoCount").text(response.public_repos);
-      $(".userInfo .followers").text(response.following);
-      $(".userInfo .location").text(response.location);
-      $(".userInfo .createdOn").text(moment(response.created_at).format('D/M/Y'));
+      $(".userInfo .email").text("Email: " + response.email);
+      $(".userInfo .name").text("Name: " + response.name);
+      $(".userInfo .repoCount").text("Repo Count: " + response.public_repos);
+      $(".userInfo .followers").text("Followers: " + response.following);
+      $(".userInfo .location").text("Location: " + response.location);
+      $(".userInfo .createdOn").text("Account created on " + moment(response.created_at).format('D/M/Y'));
     });
 };
 
