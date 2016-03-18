@@ -6,6 +6,13 @@ exports.GetUserRepos = function(username) {
     .then(function(response){
       console.log(response);
       $(".template .user h3").html(response[0].owner.login);
+      for(var i = 0; i < response.length; i++)
+      {
+        var html = '<li><a href="'+response[i].html_url+'">'+response[i].name+'</a>';
+        html += '</li>';
+
+        $(".template .repositories ul").append(html);
+      }
       exports.appendUser();
     }).fail(function(error){
       console.log(error.responseJSON.message);
